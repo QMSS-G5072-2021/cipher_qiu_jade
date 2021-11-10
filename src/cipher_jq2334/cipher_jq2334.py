@@ -4,9 +4,9 @@ def cipher(text, shift, encrypt=True):
 
     Parameters
     ----------
-    test : code to encrypt or decrypt
+    text : code to encrypt or decrypt
     shift :  the number of places shifted down the alphabet for this particular encrypted / decrypted code
-    encrypt : boolean to indicate whether function should be used to encry or decrycle
+    encrypt : boolean to indicate whether function should be used to encrypt or decrypt text
 
     Returns
     -------
@@ -16,12 +16,10 @@ def cipher(text, shift, encrypt=True):
     Examples
     --------
     >>> from cipher_jq2334 import cipher
-    >>> a = pd.Categorical(["character", "hits", "your", "eyeballs"])
-    >>> b = pd.Categorical(["but", "integer", "where it", "counts"])
-    >>> pypkgs.catbind(a, b)
-    [character, hits, your, eyeballs, but, integer, where it, counts]
-    Categories (8, object): [but, character, counts,
-    eyeballs, hits, integer, where it, your]
+    >>> cipher('Hello', 1, encrypt = True)
+    ['Ifmmp']
+    >>> cipher('Ifmmp', 1, encrypt = False)
+    ['Hello']
     """
     alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
     new_text = ''
